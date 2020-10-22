@@ -1,27 +1,40 @@
 <?php
     // var_dump($_POST);
-    foreach($_POST as $item) {
+
+
         if(isset($_POST['text'])){
             $name = $_POST['text'];
-            echo $name;
+            echo $name . "<br>";
         }
         if(isset($_POST['email'])){
             $email = $_POST['email'];
-            echo $email;
+            echo $email . "<br>";
         }
         if(isset($_POST['password'])){
             $password = $_POST['password'];
-            echo $password;
+            echo $password . "<br>";
         }
         if(isset($_POST['gender'])){
             $gender = $_POST['gender'];
-            echo $gender;
+            echo $gender . "<br>";
+        }
+
+        if(isset($_POST['expert'])) {
+            $expert = $_POST['expert'];
+            foreach($expert as $field) {
+                echo $field . '<br>';
+            }
+            
+        }
+        if(isset($_POST['expert'])) {
+            echo "Interest in <br>";
+            echo $_POST['interest']."<br>";
         }
 
         if(isset($_POST['language'])){
             $language = $_POST['language'];
-            echo $language;
+            echo $language . "<br>";
         }
 
         // echo $item . '<br>';
-    }
+    

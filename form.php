@@ -85,12 +85,12 @@
             Nofgender++;
         }
         else if(field == "expert_in" && Nofexpert < 1){
-            var expert = 'You are expert in: <br><input type="checkbox" id="html" name="expert" value="HTML"> <label for="html"> HTML</label><br>';
-            expert += '<input type="checkbox" id="css" name="expert" value="CSS"><label for="css"> &nbsp;CSS</label><br>';
-            expert += '<input type="checkbox" id="php" name="expert" value="PHP"><label for="php"> &nbsp;PHP</label><br>';
+            var expert = 'You are expert in: <br><input type="checkbox" id="html" name="expert[]" value="HTML"> <label for="html"> HTML</label><br>';
+            expert += '<input type="checkbox" id="css" name="expert[]" value="CSS"><label for="css"> &nbsp;CSS</label><br>';
+            expert += '<input type="checkbox" id="php" name="expert[]" value="PHP"><label for="php"> &nbsp;PHP</label><br>';
             $("#appendItem").append(expert);
             var interest = '<label for="interest"><p>Choose Your interest:<p></label>';
-            interest +='<select name="expert">';
+            interest +='<select name="interest">';
             interest += '<option value="HTML"> HTML</option>';
             interest += '<option value="CSS"> CSS</option>';
             interest += '<option value="Javascript"> Javascript</option>';
