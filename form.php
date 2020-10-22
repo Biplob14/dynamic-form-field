@@ -63,39 +63,39 @@
      
 
         if(field == "name" && Nofname < 1){
-            console.log("entered");
+            // console.log("entered");
             
             $("#appendItem").append('<h3 class="text-left">Provide Your Name: </h3><br> <input type="text" name="text" class="form-control" placeholder="Type your name"><br>');
             Nofname++;
             
         }
         else if(field == "email" && Nofmail < 1){
-            $("#appendItem").append('<input type="email" name="email" value="email" class="form-control" placeholder="Type your email"><br>');
+            $("#appendItem").append('<h3 class="text-left">Provide Your Email: </h3><br> <input type="email" name="email" value="email" class="form-control" placeholder="Type your email"><br>');
             Nofmail++;
         }
         else if(field == "password" && Nofpass < 1){
-            $("#appendItem").append('<input type="password" name="password" class="form-control" placeholder="Type your password"><br>');
+            $("#appendItem").append('<h3 class="text-left">Provide Desired Password: </h3><br> <input type="password" name="password" class="form-control" placeholder="Type your password"><br>');
             Nofpass++;
         }
         else if(field == "gender" && Nofgender < 1){
-            var gender = '<input type="radio" name="gender" value="Male"> <b>Male</b><br>';
+            var gender = '<h3 class="text-left">Select gender: </h3><br> <input type="radio" name="gender" value="Male"> <b>Male</b><br>';
             gender += '<input type="radio" name="gender" value="Female"> <b>Female</b><br>';
             gender += '<input type="radio" name="gender" value="Other"> <b>Other</b><br>';
             $("#appendItem").append(gender);
             Nofgender++;
         }
         else if(field == "expert_in" && Nofexpert < 1){
-            var expert = 'You are expert in: <br><input type="checkbox" id="html" name="expert[]" value="HTML"> <label for="html"> HTML</label><br>';
+            var expert = '<h3 class="text-left">You are expert in: </h3><br><input type="checkbox" id="html" name="expert[]" value="HTML"> <label for="html"> HTML</label><br>';
             expert += '<input type="checkbox" id="css" name="expert[]" value="CSS"><label for="css"> &nbsp;CSS</label><br>';
             expert += '<input type="checkbox" id="php" name="expert[]" value="PHP"><label for="php"> &nbsp;PHP</label><br>';
             $("#appendItem").append(expert);
-            var interest = '<label for="interest"><p>Choose Your interest:<p></label>';
+            var interest = '<label for="interest"><h3 class="text-left">Choose Your interest:</h3><br> </label>';
             interest +='<select name="interest">';
             interest += '<option value="HTML"> HTML</option>';
             interest += '<option value="CSS"> CSS</option>';
             interest += '<option value="Javascript"> Javascript</option>';
             interest += '<option value="Typescript"> Typescript</option>';
-            interest += '</select>';
+            interest += '</select><br>';
             $("#appendItem").append(interest);
             Nofexpert++;
         }
